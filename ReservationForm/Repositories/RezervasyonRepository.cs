@@ -18,10 +18,6 @@ namespace ReservationForm.Repositories
 			_context = context;
 		}
 
-		//public async Task<IEnumerable<Rezervasyon>> GetAll()
-		//{
-		//	return await _context.Rezervasyons.ToListAsync();
-		//}
 		public async Task<IEnumerable<Rezervasyon>> GetAll(Expression<Func<Rezervasyon, bool>> filter = null)
 		{
 			using (_context)
@@ -32,12 +28,6 @@ namespace ReservationForm.Repositories
 			}
 		}
 
-		//public async Task<Rezervasyon> Create(Rezervasyon rezervasyon)
-		//{
-		//	_context.Rezervasyons.Add(rezervasyon);
-		//	await _context.SaveChangesAsync();
-		//	return rezervasyon;
-		//}
 		public async Task<Rezervasyon> Create(Rezervasyon rezervasyon)
 		{
 			using (_context)
